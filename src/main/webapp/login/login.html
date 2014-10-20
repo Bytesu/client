@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1.0">
+    <meta http-equiv="Expires" content="0">
+    <link rel="shortcut icon" href="/assets/imgs/ico/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/common.css"/>
+    <link rel="stylesheet" href="../assets/css/login/login.css"/>
+    <title>登录 - Client</title>
+</head>
+<body>
+
+</body>
+<script>
+    var People = function(){
+        this.name = "Client Login";
+        this.age = "25";
+        this.gender = "boy";
+    };
+    var people = new People();
+    with (people){
+      var str = "姓名:"+name
+              +"<br>年龄:"+age
+              +"<br>性别:"+gender;
+        document.write(str);
+    };
+</script>
+</html>

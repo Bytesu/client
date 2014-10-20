@@ -23,14 +23,21 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
-	
-	
 	<!-- session-timeout default Minutes -->
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>
 	<welcome-file-list>
+		<!-- <welcome-file>index.jsp</welcome-file> -->
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-  
+	<!-- error page config -->
+  <error-page>
+     <error-code>404</error-code>
+     <location>/WEB-INF/pages/404.jsp</location>
+ </error-page>
+  <error-page>
+     <exception-type>java.lang.Exception</exception-type>
+     <location>/WEB-INF/pages/404.jsp</location>
+ </error-page>
 </web-app>

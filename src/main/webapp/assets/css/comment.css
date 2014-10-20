@@ -1,0 +1,19 @@
+.ctner{width:1000px;margin: 0 auto;margin-top: 80px;}
+.w-640{width: 640px;background: #f4f4f4;height: 208px;border-top: 4px solid #000;}
+.w-640 .comment-title{padding: 8px 10px 8px 1px;}
+.w-640 .title{text-indent: 9px;font: 18px "微软雅黑";width: 100px;float: left;}
+.w-640 .user-num{width: 200px;float: right;}
+.user-num em {
+    padding: 0 5px;
+}
+.ta-comment{width: 598px;
+    height: 90px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-image: url(http://y1.ifengimg.com/9db17ab793eef980/2014/0702/comment.gif);
+    color: #666;
+    background-repeat: no-repeat;
+    background-position: center 18px;}
+.fc-ba2636{color: #ba2636;}
+.clear{clear: both;}

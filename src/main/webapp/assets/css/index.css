@@ -1,0 +1,75 @@
+/**布局
+*-------------------------------*/
+body{
+    background-color: #f8f8f8;
+}
+.ctner{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.m-menu{
+    width: 220px;
+    background: #FFF;
+    float: left;
+}
+.nav-menu{
+    margin-top: 27px;
+    position: relative;
+    z-index: 0;
+}
+.nav-label{
+    position: absolute;
+    top: 0;
+    left: -7px;
+    z-index: -1;
+    width: 227px;
+    height: 41px;
+    background: #f8f8f8;
+    border-left: 7px solid #ff5f3e;
+    display: none;
+}
+.ul-nav{
+    width: 156px;
+    margin-left: 32px;
+    overflow-x: hidden;
+}
+.ul-nav li{
+    float: left;
+    border-top: 1px solid #f8f8f8;
+}
+.ul-nav > li > a{
+    float: left;
+    width: 156px;
+    padding: 9px 0;
+    color: #606566;
+    font-size: 14px;
+    line-height: 21px;
+    text-indent: 7px;
+}
+.sub-nav a{
+    font-size: 13px;
+    text-indent: 39px;
+    width: 156px;
+    padding: 9px 0;
+    color: #606566;
+    font-size: 14px;
+    line-height: 21px;
+    float: left;
+}
+a:hover {
+    color: #ff5f3e!important;
+    text-decoration: none;
+}
+
+.m-main{
+    width: 750px;
+    float: right;
+    border:1px solid gray;
+}
+
+/**模块
+*-------------------------------*/
+
+/**功能
+*-------------------------------*/
