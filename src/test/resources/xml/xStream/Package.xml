@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package>
+	<OPFlag>0104</OPFlag>
+	<ProductID>323002000</ProductID>
+	<ProductInfo>
+		<Product>
+			<ProductID>sinsi</ProductID>
+			<ProductValue>sinsi</ProductValue>
+		</Product>
+		<Product>
+			<ProductID>ProductID2</ProductID>
+			<ProductValue>ProductValue2</ProductValue>
+		</Product>
+	</ProductInfo>
+</Package> 
