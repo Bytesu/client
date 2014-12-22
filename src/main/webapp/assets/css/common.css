@@ -3,3 +3,43 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 /* 请不要修改此样式 */
 
 /** 全局通用样式 */
+
+/** a */
+a:link{}
+a:ACTIVE{}
+a:HOVER{}
+/** fs */
+.fs12{font-size: 12px;}
+.fs13{font-size: 13px;}
+.fs14{font-size: 14px;}
+.fs16{font-size: 16px;}
+.fs18{font-size: 18px;}
+.fs20{font-size: 20px;}
+.fs24{font-size: 24px;}
+.fs26{font-size: 26px;}
+.fs36{font-size: 36px;}
+.fs48{font-size: 48px;}
+/** fc */
+
+/**pointer*/
+.cpointer{cursor: pointer;}
+.cdefault{cursor: default;}
+
+/**margin padding*/
+.mt20{margin-top: 20px;}
+.p{padding: 5px;}
+
+/** bgc */
+.bgeee{background: #EEE;}
+
+/** btn */
+
+/** radius */
+.frad{border-radius:3px;}
+/* box-shadow*/
+.bs{}
+/* animate*/
+
+.fboder{border: 1px solid #b3b3b3;}
+.frds{border: 1px solid #b3b3b3;}
+.fbs{box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;}
