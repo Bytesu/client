@@ -2,6 +2,7 @@
 <html >
 <head>
 <meta name="keywords" content="" />
+
 <meta name="description" content="" />
 <jsp:include page="${ctx}/common/header.jsp"></jsp:include>
 <link rel="stylesheet/less" type="text/css" href="${ctx}/assets/less/main/index.less" />
@@ -13,7 +14,7 @@
 	</section>
 </header>
 <section>
-	<h2>Client!</h2>
+	<h2>Client! 工欲善其事，必先利其器!</h2>
 </section>
 <footer></footer>
 <canvas></canvas>

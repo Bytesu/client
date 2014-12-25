@@ -32,8 +32,8 @@
                 _width: 500px;
                 padding: 30px 20px 50px;
                 border: 1px solid #b3b3b3;
-                border-radius: 4px;
-                margin: 0 auto;
+                border-radius: 2px;
+                margin: 50px auto;
                 box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
                 background: #fcfcfc;
             }

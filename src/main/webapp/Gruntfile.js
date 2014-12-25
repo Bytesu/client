@@ -20,48 +20,74 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        /*src: 'assets/js/index.js',
-        dest: 'build/js/index.min.js'*/
-    	  /*files:{
-        	  'build/js/index.min.js': ['assets/js/index.js', 'assets/js/test.js'],
-          }*/
-    	  /*files:{},*/
-    	  files:[
-    	         {src:'assets/js/**/*.js',dest:"build/",ext:".min2.js"}
-    	  ]
+    	  files:{
+			  "build/js/index.min.js":["assets/js/*.js"]
+		  }
+      }
+	},
+    jshint: {
+      options: {
+        //大括号包裹
+        curly: true,
+        //对于简单类型，使用===和!==，而不是==和!=
+        eqeqeq: true,
+        //对于首字母大写的函数（声明的类），强制使用new
+        newcap: true,
+        //禁用arguments.caller和arguments.callee
+        noarg: true,
+        //对于属性使用aaa.bbb而不是aaa['bbb']
+        sub: true,
+        //查找所有未定义变量
+        //undef: true,
+        //查找类似与if(a = 0)这样的代码
+        boss: true
+      },
+      //具体任务配置
+      files: {
+        src: ['assets/js/*.js']
       }
     },
-    jshint: {
-	  // define the files to lint
-	  files: ['gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
-	  // configure JSHint (documented at http://www.jshint.com/docs/)
-	  options: {
-	      // more options here if you want to override JSHint defaults
-	    globals: {
-	      jQuery: true,
-	      console: true,
-	      module: true
-	    }
-	  }
-	},
-	watch: {
-		  files: ['<%= jshint.files %>'],
-		  tasks: ['jshint', 'qunit']
-		}
+    less:{
+      development:{
+        options:{},
+        files: {
+          "assets/css/parent/index.css": "assets/less/parent/index.less"
+        }
+      },
+      production:{
+        options:{
+
+
+        },
+        files:{
+          "assets/less/parent/index.css": "assets/less/parent/index.less"
+        }
+      }
+    },
+    watch:{
+      options:{
+        livereload:true
+      },
+      script:{
+       files:'assets/**/*.js',
+        tasks:['uglify','jshint']
+      },
+      css:{
+        files:"**/*.less",
+        tasks:['less']
+      }
+    }
   });
 
   // 加载包含 "uglify" 任务的插件。
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
+  // grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-
-//在命令行上输入"grunt test"，test task就会被执行。
-  grunt.registerTask('test', ['jshint', 'qunit']);
+  //grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   // 只需在命令行上输入"grunt"，就会执行default task
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
-  //grunt.registerTask('uglify', ['uglify']);
+  grunt.registerTask('default', ['watch']);
 
 };

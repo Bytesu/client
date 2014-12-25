@@ -1,2 +1,6 @@
 "use strict";
-console.log("a test content");
+function con(){
+    //document.cookie;
+    //console.log("a test content");
+    //console.log("a test content after watching");
+}

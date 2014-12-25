@@ -32,11 +32,12 @@ body{
 .ul-nav{
     width: 156px;
     margin-left: 32px;
-    overflow-x: hidden;
+    overflow-x: hidden;-webkit-padding-start: 0;
 }
 .ul-nav li{
     float: left;
     border-top: 1px solid #f8f8f8;
+    -webkit-padding-start: 0;
 }
 .ul-nav > li > a{
     float: left;
