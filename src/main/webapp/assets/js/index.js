@@ -18,7 +18,7 @@ function snowflakes(){
 			particles.push({
 				x: Math.random()*W, //x-coordinate
 				y: Math.random()*H, //y-coordinate
-				r: Math.random()*3+1, //radius
+				r: Math.random()*2+1, //radius
 				d: Math.random()*mp //density
 			})
 		}
@@ -27,8 +27,13 @@ function snowflakes(){
 		function draw()
 		{
 			ctx.clearRect(0, 0, W, H);
-
+			var grd=ctx.createLinearGradient(0,0,W,H);
+			grd.addColorStop(0,"#FF0000");
+			grd.addColorStop(1,"#00FF00");
+			//ctx.fillStyle=grd;
 			ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+			//ctx.strokeStyle = "rgba(255, 255, 255, 0.8)";
+			//ctx.fillStyle = "rgba("+Math.floor(Math.random()*255)+", "+Math.floor(Math.random()*255)+", "+Math.floor(Math.random()*255)+", 0.8)";
 			/* ctx.fillStyle = "#FF0000";*/
 			ctx.beginPath();
 			for(var i = 0; i < mp; i++)
@@ -36,7 +41,10 @@ function snowflakes(){
 				var p = particles[i];
 				ctx.moveTo(p.x, p.y);
 				ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+
+
 			}
+			//ctx.stroke();
 			ctx.fill();
 			update();
 		}
@@ -61,7 +69,7 @@ function snowflakes(){
 //Lets make it a bit more organic and let flakes enter from the left and right also.
 				if(p.x > W || p.x < 0 || p.y > H)
 				{
-					if(i%3 > 0) //66.67% of the flakes
+					if(i%2 > 0) //66.67% of the flakes
 					{
 						particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d};
 					}
@@ -86,4 +94,4 @@ function snowflakes(){
 //animation loop
 		setInterval(draw, 15);
 }
-window.onload = snowflakes;
+//window.onload = snowflakes;

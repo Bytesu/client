@@ -1,15 +1,24 @@
 @import "../common.less";
-@bgbody:#CCC;
 body{
-  background: @bgbody;
+  background: @cf5;
   padding:0;
-  margin: 0px;
+  margin: 0;
+  color: @baseC ;
+  .ff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #c0c0c0;
 }
-.header{
-  color: @fc33;
-
+.body{
+  width: 1000px;
+  margin: 0 auto;
 }
-.canvas{
-  .posAbs;
-  z-index: -1;
+@media screen and (max-width: 1000px){//1000=<
+  body{
+    background-color: #000011;
+    background-position: 0 0;
+    background: #ffff00;
+  }
+  .body{
+    width: 100%;
+  }
 }

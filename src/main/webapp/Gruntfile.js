@@ -51,16 +51,24 @@ module.exports = function(grunt) {
       development:{
         options:{},
         files: {
-          "assets/css/parent/index.css": "assets/less/parent/index.less"
+          "assets/css/parent/index.css": ["assets/less/parent/header.less","assets/less/parent/index.less"]
         }
       },
       production:{
         options:{
-
-
+          plugins:[
+            (new require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
+          ]
         },
         files:{
-          "assets/less/parent/index.css": "assets/less/parent/index.less"
+          "assets/less/parent/index.css": ["assets/less/parent/header.less","assets/less/parent/index.less"]
+        }
+      }
+    },
+    cssmin: {    // 任务名称
+      combine: {
+        files: {
+          "assets/css/parent/index.min.css": ["assets/css/parent/index.css"]
         }
       }
     },
@@ -75,6 +83,10 @@ module.exports = function(grunt) {
       css:{
         files:"**/*.less",
         tasks:['less']
+      },
+      mincss:{
+        files:'**/*.css',
+        tasks:['cssmin']
       }
     }
   });
@@ -86,6 +98,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   //grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // 只需在命令行上输入"grunt"，就会执行default task
   grunt.registerTask('default', ['watch']);
