@@ -1,7 +1,12 @@
 @cf5:#f5f5f5;
 @cff:#FFF;
 @c66:#666;
+@c79c3d2:#79c3d2;
+@c143352:#143352;
+@cd9eef2:#d9eef2;
 @baseC:#333333;
+@baseW:1000px;
+
 .ff(){
   font-family: "Microsoft Yahei","微软雅黑",Arial,STHeiti,Tahoma,Helvetica;
 }
@@ -19,17 +24,43 @@
 .fs24(){font-size: 24px;}
 
 .fl(){float: left;}
+.fr(){float: right;}
+.fn(){float: none;}
 
 .lh50(){line-height: 50px;}
 
+
 .db(){display: block;}
+.dn(){display: none;}
 
 .tc(){text-align: center;}
 .tr(){text-align: right;}
+.bgfff(){background: #FFF;}
 
+.m0(){margin: 0;}
 .ma(){margin: 0 auto;}
+.mt20(){margin-top:20px;}
 .p0(){padding: 0;}
+.FSp(@arg:0px;){
+  padding: @arg;
+}
 
 .clear(){clear: both;}
 .clearfix:after{clear:both;content: " ";display: block;height: 0;}
 .clearfix{zoom: 1;}
+.a(){
+  text-decoration: none;
+  color: @baseC;
+}
+.ul(){
+
+  .m0;.p0;
+
+  li{
+    list-style-type: none;
+    a{
+      .db;
+      .a;
+    }
+  }
+}
