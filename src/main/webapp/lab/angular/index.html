@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html na-app="testAngular">
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="../../assets/lib/angular-1.2.20/angular.min.js"></script>
+    <title>AngularJS学习笔记-过滤器 | Client</title>
+</head>
+<body>
+<div ng-controller="TestCtrl">
+    <p>示例数据: {{ a|map:map_value:'>>':'(no)' }}</p>
+
+    <p>示例数据: {{ b|map:map_value:'>>':'(no)' }}</p>
+</div>
+
+
+<script type="text/javascript">
+    var app = angular.module('testAngular', [], angular.noop);
+    app.controller('TestCtrl', function ($scope) {
+        $scope.map_value = {
+            a: '一',
+            b: '二',
+            c: '三'
+        };
+        $scope.a = 'a';
+    });
+
+    app.filter('map', function () {
+        var filter = function (input, map_value, append, default_value) {
+            var r = map_value[input];
+            if (r === undefined) {
+                return default_value + append
+            }
+            else {
+                return r + append
+            }
+        };
+        return filter;
+    });
+    angular.bootstrap(document, ['testAngular']);
+</script>
+</body>
+</html>

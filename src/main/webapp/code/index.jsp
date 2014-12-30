@@ -20,5 +20,7 @@
 <body>
 开发页面前期主要致力于视觉设计、交互设计、界面设计、优秀插件积累等功能!<br/>
 页面开发中....
+<A HREF="angular/index.html">AngularJS</A>
+<A HREF="angular/component.html">代码组件库</A>
 </body>
 </html>
