@@ -1,3 +1,6 @@
+.p5 {
+  padding: 5px;
+}
 .clearfix:after {
   clear: both;
   content: " ";
@@ -53,6 +56,9 @@
   }
 }
 
+.p5 {
+  padding: 5px;
+}
 .clearfix:after {
   clear: both;
   content: " ";
@@ -72,6 +78,7 @@ body {
 .body {
   margin: 0 auto;
   margin-top: 20px;
+  width: 1200px;
   background: #d9eef2;
   padding: 15px;
 }
@@ -86,4 +93,39 @@ body {
   display: block;
   text-decoration: none;
   color: #333333;
+}
+.body .pad5 {
+  padding: 5px;
+}
+.body .navSite {
+  float: left;
+}
+.body .waterfall {
+  float: right;
+  width: 1000px;
+}
+.body .waterfall .ulItem {
+  margin: 0;
+  padding: 0;
+}
+.body .waterfall .ulItem li {
+  list-style-type: none;
+}
+.body .waterfall .ulItem li a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+}
+.body .waterfall .col-item {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  float: left;
+  margin-right: 20px;
+  margin: 20px;
+  width: 150px;
+}
+.body .waterfall .col-item .one-item {
+  border: 1px solid darkslategray;
+  background: #ffffff;
 }

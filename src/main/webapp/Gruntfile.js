@@ -51,8 +51,7 @@ module.exports = function(grunt) {
       development:{
         options:{},
         files: {
-          "assets/css/parent/index.css": ["assets/less/parent/header.less","assets/less/parent/index.less"],
-          "assets/css/code/index.css": ["assets/less/code/index.less"]
+          "assets/css/parent/index.css": ["assets/less/parent/header.less", "assets/less/parent/index.less"]
 
         }
       },

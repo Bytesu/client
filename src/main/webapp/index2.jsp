@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2014/12/25
-  Time: 13:50
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -42,25 +35,42 @@
   </ul>
 </header>
 <section class="body clearfix">
-  <%--<section class="right">
-      <div>
-        文本内容
+  <div class="pad5">
+
+    <nav class="navSite">
+      <ul class="siteList nav ulItem">
+        <li class="item siteitem">前端研究</li>
+        <li class="item siteitem">股票研究</li>
+      </ul>
+    </nav>
+    <div class="waterfall">
+      <div class="col-item col-item-0">
+        <div class="one-item one-item0">BootStrap1</div>
+        <div class="one-item one-item0">BootStrap1</div>
+        <div class="one-item one-item0">BootStrap1</div>
+        <div class="one-item one-item0">BootStrap1</div>
+        <div class="one-item one-item0">BootStrap1</div>
       </div>
-    </section>
-      <section class="left">
-        <ul class="menu">
-          <li><a href="javascript:void(0);">菜单1</a></li>
-          <li><a href="javascript:void(0);">菜单2</a></li>
-          <li><a href="javascript:void(0);">菜单3</a></li>
-          <li><a href="javascript:void(0);">菜单4</a></li>
-    </ul>
-  </section>--%>
-    <ul class="list">
-      <li><a href="javascript:void(0);">工具集</a></li>
-      <li><a href="javascript:void(0);">创业工具</a></li>
-      <li><a href="javascript:void(0);">开发</a></li>
-      <li><a href="javascript:void(0);">工具集</a></li>
-    </ul>
+      <div class="col-item col-item-1">
+        <div class="one-item">
+          BootStrap2
+          BootStrap2
+          BootStrap2
+          BootStrap2
+        </div>
+      </div>
+      <div class="col-item col-item-2">
+        <div class="one-item">BootStrap3</div>
+        <div class="one-item">BootStrap3</div>
+        <div class="one-item">BootStrap3</div>
+      </div>
+      <div class="col-item col-item-3">
+        <div class="one-item">BootStrap4</div>
+        <div class="one-item">BootStrap4</div>
+        <div class="one-item">BootStrap4</div>
+      </div>
+      </div>
+  </div>
 </section>
 <jsp:include page="${ctx}/common/footer.jsp"></jsp:include>
 </body>
